@@ -1,0 +1,191 @@
+# Begriffswissen für Heuristik und Suchgenerator.
+#
+# Alle Begriffe werden intern normalisiert (klein, ohne Akzente, ß -> ss,
+# Umlaute werden sowohl als "a" als auch als "ae" erkannt). Einträge sind
+# Wortanfänge/Phrasen; Treffer zählen nur an Wortgrenzen.
+#
+# Gewichte sind Punkte für den Vorfilter (0–100). Sie ersetzen keine
+# Begutachtung, sondern entscheiden nur, welche Anzeigen genauer angesehen werden.
+
+[schmuck]
+# Relevanzprüfung: Mindestens eines dieser Wörter (oder ein Schmuck-Katalog)
+# muss vorkommen, sonst wird die Anzeige verworfen.
+woerter = [
+  "schmuck", "ring", "ringe", "kette", "halskette", "collier", "choker", "armband", "armreif",
+  "armspange", "brosche", "anstecknadel", "nadel", "ohrringe", "ohrring", "ohrclips", "ohrclip",
+  "ohrstecker", "ohrhanger", "creolen", "anhanger", "medaillon", "amulett", "manschettenknopfe",
+  "krawattennadel", "charivari", "siegelring", "parure", "uhrenkette", "gliederarmband",
+  "bettelarmband", "konvolut", "kamee", "gemme", "perlenkette", "bernsteinkette", "korallenkette",
+  "granatschmuck", "trachtenschmuck", "schmuckset", "clips",
+  # fr / it / nl / en
+  "bijou", "bijoux", "bague", "broche", "collier", "bracelet", "boucles", "pendentif", "chaine",
+  "gioiello", "gioielli", "anello", "collana", "bracciale", "spilla", "orecchini", "ciondolo",
+  "sieraden", "ketting", "oorbellen", "hanger", "armband",
+  "jewelry", "jewellery", "necklace", "brooch", "earrings", "pendant", "cufflinks", "bangle", "locket",
+]
+
+[kategorien]
+# Schmuckart -> Schlüsselwörter (für Punzen-Ort und Mindestgewicht)
+ring = ["ring", "ringe", "siegelring", "bague", "anello", "trauring", "ehering", "solitar"]
+kette = ["kette", "halskette", "collier", "choker", "chaine", "collana", "ketting", "necklace", "panzerkette", "konigskette", "ankerkette", "figarokette"]
+armband = ["armband", "gliederarmband", "bettelarmband", "bracelet", "bracciale"]
+armreif = ["armreif", "armspange", "bangle", "jonc"]
+brosche = ["brosche", "anstecknadel", "broche", "spilla", "brooch", "vorstecknadel"]
+ohrclips = ["ohrclips", "ohrclip", "clips", "clip-ohrringe", "clipohrringe"]
+ohrringe = ["ohrringe", "ohrring", "ohrstecker", "ohrhanger", "creolen", "boucles", "orecchini", "oorbellen", "earrings"]
+anhaenger = ["anhanger", "medaillon", "amulett", "pendentif", "ciondolo", "hanger", "pendant", "locket"]
+manschettenknoepfe = ["manschettenknopfe", "manschettenknopf", "cufflinks", "boutons de manchette"]
+konvolut = ["konvolut", "sammlung", "paket", "lot", "bundle", "posten", "schmuckkasten inhalt", "lotto"]
+
+[punzen_orte]
+# Abschnitt 4 der Grundprompt: Wo sitzt die Punze typischerweise?
+ring = "Ringinnenseite (Ringschiene) – scharfe Nahaufnahme mit Streiflicht"
+kette = "Verschluss (Federring/Karabiner/Kastenschloss) und das gegenüberliegende Kettenendstück"
+armband = "Kastenschloss bzw. Verschluss und die Innenseite der Endglieder"
+armreif = "Innenseite des Armreifs, besonders nahe Scharnier oder Verschluss"
+brosche = "Rückseite mit Nadelhalter, Nadelscharnier und Sicherheitsverschluss"
+ohrclips = "Clipbügel und Clipmechanismus auf der Rückseite"
+ohrringe = "Stecker bzw. Brisur/Omega-Clip und die Rückseite"
+anhaenger = "Anhängeröse (Bügel) und die Rückseite"
+manschettenknoepfe = "Rückseite und Bügel/Klappmechanismus"
+konvolut = "Nahaufnahmen der verdächtigen Einzelstücke, jeweils Verschluss/Innenseite/Rückseite"
+sonstiges = "Rückseite sowie alle Verschlüsse, Ösen und Verbindungsstellen"
+
+[mindestgewicht_g]
+# Konservative Mindestgewichte, falls der Verkäufer kein Gewicht nennt.
+ring = 1.5
+kette = 2.0
+armband = 3.0
+armreif = 5.0
+brosche = 3.0
+ohrclips = 2.0
+ohrringe = 1.0
+anhaenger = 0.8
+manschettenknoepfe = 4.0
+konvolut = 2.0
+sonstiges = 1.0
+
+[gold]
+# Eindeutige Goldbehauptungen (ohne Plattierung)
+stark = [
+  "echtgold", "echt gold", "echtes gold", "massivgold", "massiv gold", "vollgold", "gelbgold", "weissgold",
+  "rotgold", "feingold", "goldschmuck echt", "or massif", "or jaune", "or blanc", "oro giallo", "oro bianco",
+  "oro massiccio", "geelgoud", "witgoud", "solid gold",
+]
+# Mehrdeutige Goldwörter – Laien nutzen sie auch für die FARBE ("Kette gold")
+woerter = [
+  "gold", "goldring", "goldkette", "goldarmband", "goldbrosche", "goldanhanger", "goldohrringe",
+  "goldcollier", "goldschmuck", "bicolor", "tricolor", "rosegold", "oro", "goud",
+]
+# Unsicherheits-Formulierungen rund um Gold (Informationsasymmetrie!)
+unsicher = [
+  "gold?", "echt gold?", "evtl gold", "evtl. gold", "eventuell gold", "vielleicht gold", "vermutlich gold",
+  "wahrscheinlich gold", "gold oder", "gold ungepruft", "gold nicht gepruft", "gold nicht getestet",
+  "gold unbekannt", "ob gold", "gold ?", "or ?", "peut-etre or", "forse oro", "misschien goud",
+]
+
+[plattiert]
+# Nicht massiv: neutralisiert Karat-/Goldangaben
+woerter = [
+  "vergoldet", "goldplattiert", "plattiert", "gold plated", "goldplated", "plated", "gold filled",
+  "goldfilled", "gold-filled", "walzgold", "goldauflage", "gold auflage",
+  "rgp", "gf", "ip gold", "pvd", "vermeil", "dore a l'or fin", "plaque or", "placcato", "verguld",
+  "goldbeschichtet", "beschichtet", "talmi", "tombak", "messing", "bronze vergoldet",
+  "doublee", "gold double", "double gold", "doublegold", "double-gold",
+]
+# Wird im NICHT normalisierten Text gesucht (Akzent unterscheidet "Doublé" von "double")
+roh = ["doublé"]
+
+[farbe]
+# Verkäufer beschreibt nur die FARBE -> er glaubt nicht an Gold (Abschnitt 9)
+woerter = [
+  "goldfarben", "goldfarbig", "goldfarbene", "goldfarbener", "goldfarbenes", "goldton", "goldtone",
+  "gold-ton", "goldoptik", "gold optik", "goldlook", "gold farbe", "farbe gold",
+  "silberfarben", "silberfarbig", "silberton", "gold color", "gold colour", "gold tone", "gold-tone",
+  "couleur or", "dore", "doree", "color oro", "dorato", "goudkleurig",
+]
+
+[silber]
+woerter = ["925", "sterling", "silber", "sterlingsilber", "argent", "argento", "zilver", "silver", "800er silber", "835", "800 silber"]
+
+[konstruktion]
+# Abschnitt 3: indirekte Goldindizien / Goldschmiedekonstruktionen
+gewicht = 4
+woerter = [
+  "kastenschloss", "kastenverschluss", "sicherheitsacht", "sicherheitsbugel", "sicherheitskettchen",
+  "sicherheitsverschluss", "scharnier", "omega", "omegaclip", "omega-clip", "omegaverschluss",
+  "patentverschluss", "brisur", "massiv", "schwer", "wuchtig",
+  "handarbeit", "handgefertigt", "goldschmied", "goldschmiede", "goldschmiedearbeit", "unikat",
+  "filigran", "granulation", "emaille", "email", "guilloche", "guillochiert", "niello", "cloisonne",
+  "gravur", "graviert", "monogramm", "krappenfassung", "zargenfassung", "chaton", "pave",
+  "lotstelle", "gelotet", "fischgrat", "panzerkette", "konigskette", "ankerkette", "figarokette",
+  "singapurkette", "byzantiner", "venezianerkette", "erbskette", "schlangenkette", "zopfkette",
+  "gliederkette", "steckverschluss", "bajonettverschluss", "hohlglieder",
+  "fermoir", "charniere", "chiusura", "scatto", "clasp", "hinge",
+]
+
+[steine]
+edel = ["brillant", "brillanten", "diamant", "diamanten", "saphir", "rubin", "smaragd", "diamond", "sapphire", "ruby", "emerald", "zuchtperle", "akoya", "naturperle", "orientperle"]
+halbedel = [
+  "granat", "amethyst", "citrin", "topas", "turmalin", "aquamarin", "opal", "turkis", "lapis", "koralle",
+  "bernstein", "onyx", "karneol", "chrysopras", "achat", "jade", "mondstein", "peridot", "tansanit",
+  "markasit", "gagat", "perlmutt", "almandin", "rhodolith", "morganit",
+]
+modern_billig = ["zirkonia", "zirkon", "strass", "strasssteine", "kristallglas", "cubic zirconia", "cz", "glassteine", "acrylsteine"]
+
+[punze]
+# Hinweise, dass es eine Marke/Punze gibt (auch wenn nicht lesbar)
+woerter = [
+  "punze", "punziert", "gepunzt", "gestempelt", "stempel", "signiert", "signatur", "signed", "gemarkt",
+  "markiert", "herstellermarke", "meistermarke", "feingehalt", "feingehaltsstempel", "poincon", "punzone",
+  "hallmark", "unleserlich", "schwer lesbar", "nicht lesbar", "kaum lesbar",
+]
+unbekannte_marke = ["marke unbekannt", "unbekannte marke", "hersteller unbekannt", "unbekannter hersteller", "signatur unbekannt", "stempel unbekannt", "unbekannte punze", "unbekannter stempel"]
+
+[epochen]
+# Abschnitt 7: Stil-/Epochenbegriffe mit Gewicht. "sieht alt aus" genügt nie –
+# darum geben reine Wörter wie "vintage" oder "alt" nur sehr wenig.
+fruehe = ["jugendstil", "art nouveau", "art deco", "belle epoque", "edwardian", "edwardianisch", "viktorianisch", "victorian", "biedermeier", "historismus", "grunderzeit", "georgian", "secession", "arts and crafts", "arts & crafts", "liberty stil"]
+fruehe_gewicht = 10
+mitte = ["mid century", "midcentury", "mid-century", "modernist", "modernistisch", "modernismus", "brutalist", "brutalistisch", "brutalismus", "space age", "retro 40er", "bauhaus", "skandinavisch", "scandinavian", "nordic design"]
+mitte_gewicht = 8
+jahrzehnte = ["1920er", "20er jahre", "1930er", "30er jahre", "1940er", "40er jahre", "1950er", "50er jahre", "1960er", "60er jahre", "1970er", "70er jahre", "1980er", "80er jahre", "annees 60", "annees 70", "anni 60", "anni 70", "jaren 60", "jaren 70", "fifties", "sixties", "seventies"]
+jahrzehnte_gewicht = 3
+vage = ["vintage", "alt", "antik", "antique", "retro", "ancien", "antico", "oud"]
+vage_gewicht = 1
+
+[region]
+# Herkunftsangaben, die auf ernsthafte Schmuckherstellung deuten
+woerter = ["pforzheim", "schwabisch gmund", "hanau", "idar-oberstein", "idar oberstein", "denmark", "danmark", "norway", "norge", "finland", "suomi", "sweden", "sverige", "austria", "wien", "vienna", "western germany", "w. germany", "czechoslovakia", "gablonz", "gablonzer", "made in england", "birmingham", "arezzo", "vicenza", "valenza"]
+gewicht = 4
+
+[ahnungslos]
+# Abschnitt 9: Signale für Informationsasymmetrie – NICHT automatisch Wert!
+woerter = [
+  "keine ahnung", "weiss leider nicht", "weiss nicht", "weiss ich nicht", "kenne mich nicht aus",
+  "kenne mich damit nicht aus", "kenne mich da nicht aus", "keine kenntnisse", "bin kein experte",
+  "bin kein fachmann", "dachbodenfund", "dachboden", "nachlass", "haushaltsauflosung",
+  "wohnungsauflosung", "entrumpelung", "omas schmuck", "von oma", "meiner oma", "aus omas",
+  "oma's", "grossmutter", "erbstuck", "geerbt", "schmuckschatulle", "schmuckkastchen",
+  "schmuckkasten", "unbekannte marke", "marke unbekannt", "material unbekannt", "nicht getestet",
+  "ungetestet", "ungepruft", "nicht gepruft", "siehe fotos", "siehe bilder", "siehe foto",
+  "siehe bild", "wie abgebildet", "keine angaben", "ohne gewahr", "keine garantie", "weiss nicht ob",
+  "ob echt", "flohmarkt", "trodel",
+  "je ne sais pas", "aucune idee", "grenier", "succession", "heritage", "grand-mere", "non teste",
+  "non so", "eredita", "della nonna", "soffitta", "non testato",
+  "geen idee", "zolder", "erfenis", "van oma", "niet getest",
+  "no idea", "don't know", "dont know", "attic", "estate", "grandma", "untested", "unknown",
+]
+# Fragezeichen im Titel ("Gold?") wird zusätzlich im Code erkannt
+unsicher = ["evtl", "eventuell", "vielleicht", "vermutlich", "wahrscheinlich", "moglicherweise", "keine ahnung ob"]
+
+[ausschluss]
+# Abschnitt 16: sofort aussortieren
+faelschung = ["fake", "replik", "replika", "replica", "nachbildung", "dupe", "inspired", "inspiriert", "1:1", "aaa", "mirror quality", "nachgemacht", "eine kopie", "kopie von", "im stil von", "style cartier", "cartier style", "like cartier", "wie cartier", "chanel style", "dior style", "vca style", "alhambra style"]
+# Materialausschluss greift NICHT, wenn gleichzeitig starke Wertsignale vorliegen
+material = ["edelstahl", "stainless", "chirurgenstahl", "surgical steel", "titanstahl", "316l", "silikon", "fimo", "polymer clay", "holzperlen", "kunstleder", "plastikschmuck"]
+perlenimitat = ["perlenimitat", "kunstperle", "kunstperlen", "muschelkernperle", "muschelkernperlen", "wachsperle", "glasperlen imitat", "imitationsperlen", "shell pearl", "faux pearl", "perles fantaisie"]
+kinder = ["kinderschmuck", "kinder schmuck", "fur kinder", "madchen schmuck", "kinderring", "kinderkette", "barbie", "lol surprise", "paw patrol", "frozen"]
+sonstiges = ["piercing", "nasenpiercing", "bauchnabelpiercing", "tunnel", "plug", "fussband", "zehenring", "haarspange", "haargummi", "handykette", "schlusselanhanger", "taschenanhanger"]
+neu_massenware = ["neu mit etikett", "neu und ungetragen", "originalverpackt", "nie getragen neu"]
+look = ["vintage look", "vintage-look", "vintage optik", "antik optik", "antik-optik", "used look", "boho", "hippie look"]

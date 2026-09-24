@@ -1,0 +1,968 @@
+# Marken- und Herstellerwissen für die Schatzsuche.
+#
+# Diese Datei ist bewusst editierbar: Marken ergänzen, Stufen anpassen,
+# Tippfehler nachtragen. Alle Aliase werden intern normalisiert
+# (Kleinschreibung, ohne Akzente, ß -> ss, ä -> a/ae), daher reicht eine Schreibweise.
+#
+# stufe:
+#   luxus                 bekannte Luxusmarke  -> hoher Wert, aber sehr hohes Fälschungsrisiko
+#   sammler               gesuchte Designer / historische Häuser -> Kernzielgruppe der Suche
+#   goldschmied           Hersteller, deren Stücke praktisch immer Edelmetall sind
+#   designer_modeschmuck  hochwertiger Designer-Modeschmuck, Wiederverkauf oft >= 40 €
+#   neutral               bekannt, aber meist unter 40 € Wiederverkauf -> kein Bonus
+#   massenware            wird sofort aussortiert (Negativfilter)
+#
+# aliase:     Schreibweisen, die im Text als Markennennung gelten (Wortgrenzen!)
+#             Achtung bei Allerweltswörtern: "Grosse" (= große), "Weiss" (= weiß),
+#             "From" usw. nur in eindeutigen Kombinationen eintragen.
+# tippfehler: bekannte Falschschreibungen (Richtung F: fehlerbasierte Suche).
+#             Zusätzlich erzeugt das Programm automatisch Varianten.
+# suche:      false = Marke nicht aktiv suchen (nur im Text erkennen)
+# suchbegriff: abweichender Text für die Vinted-Suche (Standard: name)
+
+# ---------------------------------------------------------------------------
+# LUXUS – nur mit Vorsicht: bei Niedrigpreis ist eine Fälschung wahrscheinlicher
+# als ein Preisfehler. Interessant sind v. a. unsignierte Stücke mit Design-DNA.
+# ---------------------------------------------------------------------------
+[[marke]]
+name = "Cartier"
+aliase = ["cartier"]
+tippfehler = ["catier", "cartiere", "carteir", "cartie", "kartier"]
+stufe = "luxus"
+land = "FR"
+
+[[marke]]
+name = "Van Cleef & Arpels"
+aliase = ["van cleef", "vancleef", "van cleef & arpels", "van cleef arpels", "vca"]
+tippfehler = ["van clef", "van cleff", "vancleff", "van cliff"]
+stufe = "luxus"
+land = "FR"
+
+[[marke]]
+name = "Bulgari"
+aliase = ["bulgari", "bvlgari"]
+tippfehler = ["bulgary", "bulgarie", "bvlgary", "bulghari"]
+stufe = "luxus"
+land = "IT"
+
+[[marke]]
+name = "Tiffany & Co."
+aliase = ["tiffany & co", "tiffany and co", "tiffany co", "tiffany"]
+tippfehler = ["tiffani", "tifany", "tiffanny", "tiffeny"]
+stufe = "luxus"
+land = "US"
+
+[[marke]]
+name = "Chanel"
+aliase = ["chanel"]
+tippfehler = ["channel", "chanell", "channell", "chanelle", "shanel"]
+stufe = "luxus"
+land = "FR"
+hinweis = "Vintage-Modeschmuck (Gripoix, Goossens) sammlerrelevant; extrem viele Fälschungen."
+
+[[marke]]
+name = "Christian Dior"
+aliase = ["christian dior", "dior", "chr. dior", "chr dior"]
+tippfehler = ["christian dor", "cristian dior", "christan dior", "diór"]
+stufe = "luxus"
+land = "FR"
+hinweis = "Vintage-Dior-Modeschmuck wurde in Deutschland von Henkel & Grosse gefertigt (Marke 'Chr. Dior Germany')."
+
+[[marke]]
+name = "Hermès"
+aliase = ["hermes"]
+tippfehler = ["hermess", "herms", "hermés"]
+stufe = "luxus"
+land = "FR"
+
+[[marke]]
+name = "Chopard"
+aliase = ["chopard"]
+tippfehler = ["chopart", "shopard", "choppard"]
+stufe = "luxus"
+land = "CH"
+
+[[marke]]
+name = "Boucheron"
+aliase = ["boucheron"]
+tippfehler = ["bucheron", "boucharon"]
+stufe = "luxus"
+land = "FR"
+
+[[marke]]
+name = "Chaumet"
+aliase = ["chaumet"]
+tippfehler = ["chaumette", "schaumet"]
+stufe = "luxus"
+land = "FR"
+
+[[marke]]
+name = "Piaget"
+aliase = ["piaget"]
+tippfehler = ["piagett", "piaje"]
+stufe = "luxus"
+land = "CH"
+
+[[marke]]
+name = "Pomellato"
+aliase = ["pomellato", "dodo pomellato", "pomellato dodo"]
+tippfehler = ["pomelato", "pommellato", "pommelato"]
+stufe = "luxus"
+land = "IT"
+
+[[marke]]
+name = "Buccellati"
+aliase = ["buccellati"]
+tippfehler = ["bucellati", "buccelati", "buchellati"]
+stufe = "luxus"
+land = "IT"
+
+[[marke]]
+name = "Mikimoto"
+aliase = ["mikimoto"]
+tippfehler = ["mikimotto", "mikomoto"]
+stufe = "luxus"
+land = "JP"
+
+[[marke]]
+name = "Wellendorff"
+aliase = ["wellendorff", "wellendorf"]
+tippfehler = ["wellendorff", "wellendorph", "welendorf"]
+stufe = "luxus"
+land = "DE"
+hinweis = "Pforzheimer Goldschmiede, ausschließlich Gold."
+
+[[marke]]
+name = "A. E. Köchert"
+suchbegriff = "Köchert"
+aliase = ["kochert", "koechert", "a.e. kochert", "ae kochert"]
+tippfehler = ["kochart", "koechart"]
+stufe = "luxus"
+land = "AT"
+hinweis = "Wiener k.u.k. Hofjuwelier."
+
+[[marke]]
+name = "Andrew Grima"
+aliase = ["grima", "andrew grima"]
+tippfehler = ["grimma", "andrew grimma"]
+stufe = "luxus"
+land = "GB"
+hinweis = "Britischer Modernist der 1960er/70er, Goldschmuck mit organischen Strukturen."
+
+[[marke]]
+name = "Ole Lynggaard"
+aliase = ["ole lynggaard", "lynggaard"]
+tippfehler = ["ole lyngaard", "ole lyngard", "lyngaard"]
+stufe = "luxus"
+land = "DK"
+
+[[marke]]
+name = "Louis Vuitton"
+aliase = ["louis vuitton", "vuitton"]
+tippfehler = ["louis vuiton", "luis vuitton", "louis vitton", "vuiton"]
+stufe = "luxus"
+land = "FR"
+
+[[marke]]
+name = "Gucci"
+aliase = ["gucci"]
+tippfehler = ["guci", "gucchi"]
+stufe = "luxus"
+land = "IT"
+
+# ---------------------------------------------------------------------------
+# SAMMLER – der eigentliche Kern: weniger Fälschungen, oft von Laien nicht erkannt
+# ---------------------------------------------------------------------------
+[[marke]]
+name = "Theodor Fahrner"
+aliase = ["theodor fahrner", "fahrner", "th. fahrner", "th fahrner"]
+tippfehler = ["farner", "fahner", "fahrer pforzheim", "theodor farner", "fahrnar"]
+stufe = "sammler"
+land = "DE"
+epoche = "Jugendstil / Art Déco"
+hinweis = "Pforzheim; Silber mit Markasit, Chrysopras, Emaille; Marke 'TF' im Kreis."
+
+[[marke]]
+name = "Jakob Bengel"
+aliase = ["jakob bengel", "bengel idar", "bengel idar-oberstein", "bengel art deco"]
+tippfehler = ["jacob bengel", "jakob bengl", "jakob begel"]
+stufe = "sammler"
+land = "DE"
+epoche = "Art Déco"
+hinweis = "Idar-Oberstein; Chrom + Galalith, meist UNSIGNIERT -> Design-DNA entscheidend."
+
+[[marke]]
+name = "Henkel & Grosse"
+suchbegriff = "Henkel Grosse"
+aliase = ["henkel & grosse", "henkel und grosse", "henkel grosse", "grosse germany", "grosse pforzheim"]
+tippfehler = ["henkel & große", "henkel gross", "henckel grosse", "henkel & groose"]
+stufe = "sammler"
+land = "DE"
+epoche = "1950er–1970er"
+hinweis = "Pforzheim; fertigte auch Dior-Modeschmuck. Marke 'Grosse' + Jahreszahl."
+
+[[marke]]
+name = "Perli"
+aliase = ["perli", "perli wertheim"]
+tippfehler = ["perly", "perlie"]
+stufe = "sammler"
+land = "DE"
+epoche = "Art Déco / 1930er–1950er"
+
+[[marke]]
+name = "Frey Wille"
+aliase = ["frey wille", "freywille", "frey-wille", "michaela frey", "michaela frey wille"]
+tippfehler = ["frei wille", "frey wile", "freywile", "fray wille", "frey willi"]
+stufe = "sammler"
+land = "AT"
+hinweis = "Feuer-Emaille, Motive Klimt/Hundertwasser/Ägypten; Wiederverkauf meist klar über 40 €."
+
+[[marke]]
+name = "Werkstätte Hagenauer"
+suchbegriff = "Hagenauer"
+aliase = ["hagenauer", "werkstatte hagenauer", "wien hagenauer"]
+tippfehler = ["hagenaur", "hagenhauer", "hagnauer"]
+stufe = "sammler"
+land = "AT"
+epoche = "Art Déco / Mid-Century"
+
+[[marke]]
+name = "Wiener Werkstätte"
+aliase = ["wiener werkstatte", "wiener werkstaette"]
+tippfehler = ["wiener werkstat", "wiener werkstadt"]
+stufe = "sammler"
+land = "AT"
+epoche = "Jugendstil / Secession"
+
+[[marke]]
+name = "Georg Jensen"
+aliase = ["georg jensen", "jensen denmark", "g. jensen", "gj denmark"]
+tippfehler = ["george jensen", "georg jenson", "georg jenssen", "georg jansen", "georg jenzen"]
+stufe = "sammler"
+land = "DK"
+hinweis = "Modellnummern auf der Rückseite; Designer u. a. Torun, Henning Koppel, Arno Malinowski."
+
+[[marke]]
+name = "Hans Hansen"
+aliase = ["hans hansen"]
+tippfehler = ["hans hanson", "hans hanssen"]
+stufe = "sammler"
+land = "DK"
+epoche = "Mid-Century Modern"
+
+[[marke]]
+name = "N. E. From"
+aliase = ["n.e. from", "n. e. from", "ne from", "niels erik from"]
+tippfehler = ["n.e. fromm", "ne fromm", "niels erik fromm"]
+stufe = "sammler"
+land = "DK"
+epoche = "Mid-Century Modern"
+
+[[marke]]
+name = "Bent Knudsen"
+aliase = ["bent knudsen"]
+tippfehler = ["bent knutsen", "bent knudson"]
+stufe = "sammler"
+land = "DK"
+
+[[marke]]
+name = "Anton Michelsen"
+aliase = ["anton michelsen", "a. michelsen"]
+tippfehler = ["anton michelson", "anton mikkelsen"]
+stufe = "sammler"
+land = "DK"
+
+[[marke]]
+name = "Arne Johansen"
+aliase = ["arne johansen"]
+tippfehler = ["arne johanssen", "arne johanson"]
+stufe = "sammler"
+land = "DK"
+
+[[marke]]
+name = "Bernhard Hertz"
+aliase = ["bernhard hertz"]
+tippfehler = ["bernhard herz", "bernard hertz"]
+stufe = "sammler"
+land = "DK"
+
+[[marke]]
+name = "Just Andersen"
+aliase = ["just andersen"]
+tippfehler = ["just anderson", "just andresen"]
+stufe = "sammler"
+land = "DK"
+
+[[marke]]
+name = "Arje Griegst"
+aliase = ["arje griegst", "griegst"]
+tippfehler = ["arje grieg", "griegs", "arje griegts"]
+stufe = "sammler"
+land = "DK"
+
+[[marke]]
+name = "David-Andersen"
+aliase = ["david-andersen", "david andersen", "uni david-andersen"]
+tippfehler = ["david anderson", "david andresen"]
+stufe = "sammler"
+land = "NO"
+hinweis = "Norwegische Emaille (u. a. Saga-Serie), Mid-Century."
+
+[[marke]]
+name = "Aksel Holmsen"
+aliase = ["aksel holmsen"]
+tippfehler = ["axel holmsen", "aksel holmson"]
+stufe = "sammler"
+land = "NO"
+
+[[marke]]
+name = "J. Tostrup"
+aliase = ["tostrup", "j. tostrup"]
+tippfehler = ["tostrupp", "tostroup"]
+stufe = "sammler"
+land = "NO"
+
+[[marke]]
+name = "Marius Hammer"
+aliase = ["marius hammer"]
+tippfehler = ["marius hamer", "marius hammar"]
+stufe = "sammler"
+land = "NO"
+
+[[marke]]
+name = "Ivar T. Holth"
+aliase = ["ivar t. holth", "ivar holth", "ivar t holth"]
+tippfehler = ["ivar holt", "iver holth"]
+stufe = "sammler"
+land = "NO"
+
+[[marke]]
+name = "Juhls"
+aliase = ["juhls", "juhl kautokeino", "juhls kautokeino"]
+tippfehler = ["juhl's", "juuls"]
+stufe = "sammler"
+land = "NO"
+
+[[marke]]
+name = "Lapponia"
+aliase = ["lapponia"]
+tippfehler = ["laponia", "lapponnia", "lappónia"]
+stufe = "sammler"
+land = "FI"
+hinweis = "Finnische skulpturale Silber-/Goldstücke, Designer u. a. Björn Weckström, Zoltan Popovits."
+
+[[marke]]
+name = "Björn Weckström"
+aliase = ["bjorn weckstrom", "weckstrom", "weckstroem"]
+tippfehler = ["bjorn weckstroem", "weckström", "wekstrom", "weckstrum"]
+stufe = "sammler"
+land = "FI"
+epoche = "Space Age"
+
+[[marke]]
+name = "Kalevala Koru"
+aliase = ["kalevala koru", "kalevala"]
+tippfehler = ["kalevela", "kalewala"]
+stufe = "sammler"
+land = "FI"
+
+[[marke]]
+name = "Kupittaan Kulta"
+aliase = ["kupittaan kulta", "kupittaan"]
+tippfehler = ["kupittan kulta", "kupitaan kulta"]
+stufe = "sammler"
+land = "FI"
+epoche = "Brutalismus / 1970er"
+
+[[marke]]
+name = "Pentti Sarpaneva"
+aliase = ["pentti sarpaneva", "sarpaneva"]
+tippfehler = ["penti sarpaneva", "sarpanewa", "sarpanev"]
+stufe = "sammler"
+land = "FI"
+epoche = "Brutalismus"
+hinweis = "Bronze-Brutalismus der 1960er/70er, oft von Laien als 'Messing-Anhänger' verkauft."
+
+[[marke]]
+name = "Elis Kauppi"
+aliase = ["elis kauppi"]
+tippfehler = ["elis kaupi", "ellis kauppi"]
+stufe = "sammler"
+land = "FI"
+
+[[marke]]
+name = "Sigurd Persson"
+aliase = ["sigurd persson"]
+tippfehler = ["sigurd person", "sigurd perssen"]
+stufe = "sammler"
+land = "SE"
+
+[[marke]]
+name = "Torun Bülow-Hübe"
+suchbegriff = "Torun Georg Jensen"
+aliase = ["torun", "bulow-hube", "bulow hube", "vivianna torun"]
+tippfehler = ["torun bulow", "torun hube", "toroun"]
+stufe = "sammler"
+land = "SE"
+epoche = "Mid-Century Modern"
+
+[[marke]]
+name = "Wiwen Nilsson"
+aliase = ["wiwen nilsson"]
+tippfehler = ["wiven nilsson", "wiwen nilson"]
+stufe = "sammler"
+land = "SE"
+
+[[marke]]
+name = "Alton"
+suchbegriff = "Alton Schweden"
+aliase = ["alton sweden", "alton falkoping"]
+tippfehler = ["altón"]
+stufe = "sammler"
+land = "SE"
+
+[[marke]]
+name = "Liberty & Co."
+aliase = ["liberty & co", "liberty and co", "liberty co", "liberty tudric", "liberty cymric"]
+tippfehler = ["libery & co", "liberty & co."]
+stufe = "sammler"
+land = "GB"
+epoche = "Jugendstil / Arts & Crafts"
+
+[[marke]]
+name = "Archibald Knox"
+aliase = ["archibald knox"]
+tippfehler = ["archibald nox", "archibold knox"]
+stufe = "sammler"
+land = "GB"
+epoche = "Arts & Crafts"
+
+[[marke]]
+name = "Murrle Bennett"
+aliase = ["murrle bennett", "murrle bennet", "murrle"]
+tippfehler = ["murle bennett", "murrle benett"]
+stufe = "sammler"
+land = "GB/DE"
+epoche = "Jugendstil"
+
+[[marke]]
+name = "Charles Horner"
+aliase = ["charles horner"]
+tippfehler = ["charles hornor", "charles horne"]
+stufe = "sammler"
+land = "GB"
+epoche = "Jugendstil / Edwardian"
+
+[[marke]]
+name = "Stuart Devlin"
+aliase = ["stuart devlin"]
+tippfehler = ["stewart devlin", "stuart devline"]
+stufe = "sammler"
+land = "GB"
+
+[[marke]]
+name = "Line Vautrin"
+aliase = ["line vautrin", "vautrin"]
+tippfehler = ["line votrin", "line vautren"]
+stufe = "sammler"
+land = "FR"
+epoche = "1940er–1960er"
+
+[[marke]]
+name = "Henry Perichon"
+aliase = ["henry perichon", "perichon"]
+tippfehler = ["henri perichon", "perrichon"]
+stufe = "sammler"
+land = "FR"
+
+[[marke]]
+name = "Robert Goossens"
+aliase = ["goossens", "robert goossens"]
+tippfehler = ["gossens", "goosens", "goossen"]
+stufe = "sammler"
+land = "FR"
+
+[[marke]]
+name = "Maison Gripoix"
+aliase = ["gripoix"]
+tippfehler = ["gripois", "gripoi"]
+stufe = "sammler"
+land = "FR"
+
+[[marke]]
+name = "Lalique"
+aliase = ["lalique", "rene lalique"]
+tippfehler = ["lalik", "lallique", "laliqué"]
+stufe = "sammler"
+land = "FR"
+
+[[marke]]
+name = "Miriam Haskell"
+aliase = ["miriam haskell", "haskell"]
+tippfehler = ["miriam haskel", "miriam haskall", "haskel"]
+stufe = "sammler"
+land = "US"
+epoche = "1930er–1960er"
+
+[[marke]]
+name = "Schiaparelli"
+aliase = ["schiaparelli"]
+tippfehler = ["schiapparelli", "schiaparelly", "schiaparreli"]
+stufe = "sammler"
+land = "FR/US"
+
+[[marke]]
+name = "Joseff of Hollywood"
+aliase = ["joseff", "joseff of hollywood"]
+tippfehler = ["josef of hollywood", "joseph of hollywood"]
+stufe = "sammler"
+land = "US"
+
+[[marke]]
+name = "Marcel Boucher"
+aliase = ["marcel boucher", "boucher"]
+tippfehler = ["marcel bouchet", "bouchér"]
+stufe = "sammler"
+land = "US"
+
+[[marke]]
+name = "Eisenberg"
+aliase = ["eisenberg", "eisenberg original", "eisenberg ice"]
+tippfehler = ["eisenburg", "eissenberg"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Hattie Carnegie"
+aliase = ["hattie carnegie"]
+tippfehler = ["hatty carnegie", "hattie carnagie"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Kenneth Jay Lane"
+aliase = ["kenneth jay lane", "kenneth lane", "kjl"]
+tippfehler = ["kenneth j lane", "kenneth jay lain", "kennet jay lane"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Trifari"
+aliase = ["trifari", "crown trifari"]
+tippfehler = ["trifary", "triffari", "trifarri"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Hobé"
+aliase = ["hobe"]
+tippfehler = ["hobbe"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Mazer / Jomaz"
+suchbegriff = "Jomaz"
+aliase = ["mazer", "jomaz"]
+tippfehler = ["mazzer", "jomas"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Schreiner"
+suchbegriff = "Schreiner New York"
+aliase = ["schreiner new york", "schreiner ny"]
+tippfehler = ["schriener new york"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Hollycraft"
+aliase = ["hollycraft"]
+tippfehler = ["holly craft", "hollykraft"]
+stufe = "designer_modeschmuck"
+land = "US"
+
+[[marke]]
+name = "Juliana (DeLizza & Elster)"
+suche = false  # "Juliana" ist v. a. ein Vorname
+aliase = ["delizza & elster", "delizza and elster", "juliana delizza"]
+tippfehler = ["de lizza elster", "delizza elster"]
+stufe = "designer_modeschmuck"
+land = "US"
+hinweis = "Fast immer unsigniert – Konstruktion (Rückseite, Nieten) entscheidet."
+
+[[marke]]
+name = "Christian Lacroix"
+aliase = ["christian lacroix", "lacroix"]
+tippfehler = ["christian la croix", "lacroixe", "christian lacroi"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Yves Saint Laurent"
+aliase = ["yves saint laurent", "ysl", "saint laurent", "yves st laurent", "rive gauche"]
+tippfehler = ["yves saint laurant", "yves st. laurant", "yves saint lauren", "yves sant laurent"]
+stufe = "designer_modeschmuck"
+land = "FR"
+hinweis = "Vintage (1970er–90er, teils Goossens) deutlich gesuchter als aktuelle Ware; Fälschungen häufig."
+
+[[marke]]
+name = "Givenchy"
+aliase = ["givenchy"]
+tippfehler = ["givency", "givenchi", "givanchy", "giventchy"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Balenciaga"
+aliase = ["balenciaga"]
+tippfehler = ["balenziaga", "balenciagga"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Lanvin"
+aliase = ["lanvin"]
+tippfehler = ["lanwin", "lanven"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Nina Ricci"
+aliase = ["nina ricci"]
+tippfehler = ["nina rici", "nina richi"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Pierre Cardin"
+aliase = ["pierre cardin"]
+tippfehler = ["pierre cardine", "piere cardin", "pierre kardin"]
+stufe = "designer_modeschmuck"
+land = "FR"
+epoche = "Space Age"
+
+[[marke]]
+name = "Paco Rabanne"
+aliase = ["paco rabanne"]
+tippfehler = ["paco rabane", "pako rabanne"]
+stufe = "designer_modeschmuck"
+land = "FR"
+epoche = "Space Age"
+
+[[marke]]
+name = "Courrèges"
+aliase = ["courreges"]
+tippfehler = ["courege", "coureges", "courrege"]
+stufe = "designer_modeschmuck"
+land = "FR"
+epoche = "Space Age"
+
+[[marke]]
+name = "Philippe Ferrandis"
+aliase = ["philippe ferrandis", "ferrandis"]
+tippfehler = ["philipe ferrandis", "ferandis"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Isabel Canovas"
+aliase = ["isabel canovas"]
+tippfehler = ["isabelle canovas", "isabel kanovas"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Satellite Paris"
+aliase = ["satellite paris"]
+tippfehler = ["satelite paris"]
+stufe = "designer_modeschmuck"
+land = "FR"
+
+[[marke]]
+name = "Sharra Pagano"
+aliase = ["sharra pagano"]
+tippfehler = ["shara pagano", "sharra pagani"]
+stufe = "designer_modeschmuck"
+land = "IT"
+
+[[marke]]
+name = "Ugo Correani"
+aliase = ["ugo correani", "correani"]
+tippfehler = ["ugo coreani", "correany"]
+stufe = "designer_modeschmuck"
+land = "IT"
+
+[[marke]]
+name = "Coppola e Toppo"
+aliase = ["coppola e toppo", "coppola toppo"]
+tippfehler = ["copola e toppo", "coppola e topo"]
+stufe = "sammler"
+land = "IT"
+
+[[marke]]
+name = "Moschino"
+aliase = ["moschino"]
+tippfehler = ["moschíno", "mosquino", "moskino"]
+stufe = "designer_modeschmuck"
+land = "IT"
+
+[[marke]]
+name = "Versace"
+aliase = ["versace", "gianni versace"]
+tippfehler = ["versaci", "versage", "versache"]
+stufe = "designer_modeschmuck"
+land = "IT"
+
+[[marke]]
+name = "Vivienne Westwood"
+aliase = ["vivienne westwood"]
+tippfehler = ["vivian westwood", "vivien westwood", "viviene westwood"]
+stufe = "designer_modeschmuck"
+land = "GB"
+hinweis = "Sehr viele Fälschungen (Orb-Anhänger)."
+
+[[marke]]
+name = "Butler & Wilson"
+aliase = ["butler & wilson", "butler and wilson", "butler wilson"]
+tippfehler = ["buttler & wilson", "butler & willson"]
+stufe = "designer_modeschmuck"
+land = "GB"
+
+[[marke]]
+name = "Karl Lagerfeld (Vintage)"
+suchbegriff = "Karl Lagerfeld vintage Brosche"
+aliase = ["karl lagerfeld", "lagerfeld"]
+tippfehler = ["karl lagerfield", "lagerfield", "karl lagafeld"]
+stufe = "designer_modeschmuck"
+land = "DE/FR"
+
+[[marke]]
+name = "Konplott"
+aliase = ["konplott", "miranda konstantinidou"]
+tippfehler = ["komplott", "konplot"]
+stufe = "designer_modeschmuck"
+land = "DE"
+
+[[marke]]
+name = "Andreas Daub"
+aliase = ["andreas daub"]
+tippfehler = ["andreas dau", "andreas daube"]
+stufe = "sammler"
+land = "DE"
+epoche = "1960er–1970er Modernismus"
+
+[[marke]]
+name = "Friedrich Becker"
+aliase = ["friedrich becker"]
+tippfehler = ["friedrich bekker"]
+stufe = "sammler"
+land = "DE"
+hinweis = "Kinetischer Goldschmuck, Düsseldorf."
+
+[[marke]]
+name = "Hermann Jünger"
+aliase = ["hermann junger", "hermann juenger"]
+tippfehler = ["herman junger"]
+stufe = "sammler"
+land = "DE"
+
+[[marke]]
+name = "Elisabeth Treskow"
+aliase = ["elisabeth treskow", "treskow"]
+tippfehler = ["elisabeth treskov", "treskov"]
+stufe = "sammler"
+land = "DE"
+
+[[marke]]
+name = "Pierre Lang"
+aliase = ["pierre lang"]
+tippfehler = ["piere lang", "pierre lange"]
+stufe = "neutral"
+land = "AT"
+
+# ---------------------------------------------------------------------------
+# GOLDSCHMIED – Herstellernamen, die fast immer auf Echtgold hindeuten
+# ---------------------------------------------------------------------------
+[[marke]]
+name = "Niessing"
+aliase = ["niessing"]
+tippfehler = ["niesing", "niessig"]
+stufe = "goldschmied"
+land = "DE"
+
+[[marke]]
+name = "Gellner"
+aliase = ["gellner"]
+tippfehler = ["gelner", "gellnar"]
+stufe = "goldschmied"
+land = "DE"
+hinweis = "Perlen + Gold, Pforzheim."
+
+[[marke]]
+name = "Schoeffel"
+aliase = ["schoeffel", "schoffel"]
+tippfehler = ["schöfel", "schoefel"]
+stufe = "goldschmied"
+land = "DE"
+
+[[marke]]
+name = "Henrich & Denzel"
+aliase = ["henrich & denzel", "henrich denzel", "henrich und denzel"]
+tippfehler = ["heinrich & denzel", "henrich & dentzel"]
+stufe = "goldschmied"
+land = "DE"
+
+[[marke]]
+name = "Meister"
+aliase = ["meister zurich", "meister juwelier", "meister wollishofen"]
+tippfehler = []
+stufe = "goldschmied"
+land = "CH"
+suche = false
+
+[[marke]]
+name = "Fope"
+aliase = ["fope"]
+tippfehler = ["foppe"]
+stufe = "goldschmied"
+land = "IT"
+
+[[marke]]
+name = "Unoaerre"
+aliase = ["unoaerre", "uno a erre", "1ar"]
+tippfehler = ["uno aerre", "unoarre", "unoaere"]
+stufe = "goldschmied"
+land = "IT"
+hinweis = "Arezzo; großer italienischer Goldkettenhersteller. Marke '1AR' + Feingehalt."
+
+[[marke]]
+name = "Chimento"
+aliase = ["chimento"]
+tippfehler = ["chimiento", "kimento"]
+stufe = "goldschmied"
+land = "IT"
+
+[[marke]]
+name = "Marco Bicego"
+aliase = ["marco bicego", "bicego"]
+tippfehler = ["marco bicecgo", "marco bigego"]
+stufe = "goldschmied"
+land = "IT"
+
+[[marke]]
+name = "Roberto Coin"
+aliase = ["roberto coin"]
+tippfehler = ["roberto coine", "robert coin"]
+stufe = "goldschmied"
+land = "IT"
+
+[[marke]]
+name = "Bucherer"
+aliase = ["bucherer"]
+tippfehler = ["buchrer", "bucher er"]
+stufe = "goldschmied"
+land = "CH"
+
+[[marke]]
+name = "Gübelin"
+aliase = ["gubelin", "guebelin"]
+tippfehler = ["gublin", "gueblin"]
+stufe = "goldschmied"
+land = "CH"
+
+# ---------------------------------------------------------------------------
+# NEUTRAL – bekannt, aber meist < 40 € Wiederverkauf
+# ---------------------------------------------------------------------------
+[[marke]]
+name = "Swarovski"
+aliase = ["swarovski"]
+tippfehler = ["swarovsky", "swarowski", "svarovski"]
+stufe = "neutral"
+land = "AT"
+
+[[marke]]
+name = "Monet"
+aliase = ["monet signiert", "monet vintage"]
+tippfehler = []
+stufe = "neutral"
+land = "US"
+suche = false
+
+[[marke]]
+name = "Sarah Coventry"
+aliase = ["sarah coventry", "sarah cov"]
+tippfehler = []
+stufe = "neutral"
+land = "US"
+suche = false
+
+[[marke]]
+name = "Coro"
+aliase = ["coro", "corocraft", "coro craft"]
+tippfehler = []
+stufe = "neutral"
+land = "US"
+suche = false
+
+[[marke]]
+name = "Napier"
+aliase = ["napier"]
+tippfehler = []
+stufe = "neutral"
+land = "US"
+suche = false
+
+[[marke]]
+name = "Coeur de Lion"
+aliase = ["coeur de lion"]
+tippfehler = []
+stufe = "neutral"
+land = "DE"
+suche = false
+
+[[marke]]
+name = "Flora Danica"
+aliase = ["flora danica"]
+tippfehler = []
+stufe = "neutral"
+land = "DK"
+suche = false
+
+[[marke]]
+name = "Les Néréides"
+aliase = ["les nereides", "n2 les nereides"]
+tippfehler = []
+stufe = "neutral"
+land = "FR"
+suche = false
+
+# ---------------------------------------------------------------------------
+# MASSENWARE – Negativfilter (sofort aussortieren)
+# ---------------------------------------------------------------------------
+[[marke]]
+name = "Pandora"
+aliase = ["pandora"]
+stufe = "massenware"
+
+[[marke]]
+name = "Thomas Sabo"
+aliase = ["thomas sabo", "sabo"]
+stufe = "massenware"
+
+[[marke]]
+name = "Bijou Brigitte"
+aliase = ["bijou brigitte"]
+stufe = "massenware"
+
+[[marke]]
+name = "Fast Fashion"
+aliase = ["h&m", "h & m", "zara", "mango", "primark", "shein", "temu", "aliexpress", "asos", "claire's", "claires", "bershka", "stradivarius", "pull&bear", "new yorker", "tchibo", "lidl"]
+stufe = "massenware"
+
+[[marke]]
+name = "Modemarken-Schmuck"
+# Bewusst NICHT: "guess", "pieces", "boss" (Allerweltswörter -> Fehlalarme)
+aliase = ["esprit", "s.oliver", "fossil", "tommy hilfiger", "michael kors", "paul hewitt", "purelei", "kapten & son", "nomination", "morellato", "pilgrim", "dyrberg/kern", "dyrberg kern", "engelsrufer", "leonardo jewels", "xenox", "amor schmuck", "orelia", "accessorize", "cluse", "calvin klein", "hugo boss", "liebeskind", "julie julsen"]
+stufe = "massenware"

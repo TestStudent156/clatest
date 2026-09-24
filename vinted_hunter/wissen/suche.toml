@@ -1,0 +1,215 @@
+# Suchrichtungen A–G (Abschnitt 15 der Grundprompt) und Design-DNA (Abschnitt 5).
+#
+# Jede Richtung enthält Suchbegriffe pro Sprache. Die Sprache ergibt sich aus der
+# Vinted-Domain (de/at/lu -> de, fr/be -> fr, it -> it, nl -> nl, sonst en).
+# Marken (Richtung E) und Tippfehler (Richtung F) kommen aus marken.toml.
+
+[richtung.A]
+name = "Material"
+beschreibung = "Gold, Feingehalte, Karat – auch dort, wo die Punze im Text steht, aber nicht im Titel"
+de = [
+  "585 Ring", "585 Kette", "585 Armband", "585 Ohrringe", "585 Anhänger", "585 Brosche",
+  "750 Ring", "750 Kette", "750 Ohrringe", "333 Ring", "333 Kette", "333 Armband", "333 Brosche",
+  "8 Karat Gold", "14 Karat Gold", "18 Karat Gold", "14k Gold Ring", "18k Gold Kette",
+  "Goldring alt", "Goldkette alt", "Goldbrosche", "Gelbgold Ring", "Weißgold Ring", "Rotgold",
+  "Bicolor Gold", "Tricolor Ring", "Goldschmuck Nachlass", "Perlenkette Goldverschluss",
+  "Gold Punze", "gestempelt 585", "gestempelt 333",
+]
+fr = ["or 18 carats bague", "or 750 bague", "or 750 collier", "bijou or ancien", "broche or", "bague or ancienne", "chaîne or 18k", "or 585"]
+it = ["oro 750 anello", "oro 18kt", "collana oro 750", "spilla oro", "anello oro antico", "oro 585"]
+nl = ["14 karaat goud ring", "18 karaat goud", "gouden ring oud", "gouden broche", "585 goud"]
+en = ["14k gold ring", "18k gold ring", "9ct gold", "375 gold", "gold brooch antique", "585 gold"]
+
+[richtung.B]
+name = "Beschreibung"
+beschreibung = "Verkäufer-Formulierungen mit Informationsasymmetrie (Nachlass, keine Ahnung …)"
+de = [
+  "Nachlass Schmuck", "Dachbodenfund Schmuck", "Omas Schmuck", "alter Schmuck", "Schmuck Haushaltsauflösung",
+  "Erbstück Schmuck", "Schmuckschatulle Inhalt", "Schmuck keine Ahnung", "alter Modeschmuck", "Schmuck ungeprüft",
+  "Schmuck Wohnungsauflösung", "Schmuck von Oma", "Gold oder vergoldet", "evtl Gold", "vermutlich Gold",
+  "Schmuck unbekannte Marke", "Modeschmuck alt schwer",
+]
+fr = ["bijoux succession", "bijoux grenier", "bijoux grand-mère", "lot bijoux anciens", "bijou ancien je ne sais pas"]
+it = ["gioielli nonna", "gioielli eredità", "bigiotteria vintage lotto", "gioielli soffitta"]
+nl = ["sieraden van oma", "sieraden erfenis", "oude sieraden", "zolder vondst sieraden"]
+en = ["estate jewelry", "grandma jewelry", "vintage jewelry lot", "attic find jewelry", "unknown jewelry"]
+
+[richtung.C]
+name = "Kategorie"
+beschreibung = "Schmuckarten, die oft falsch kategorisiert oder unterschätzt werden"
+de = [
+  "Brosche alt", "Ohrclips alt", "Ohrclips vintage", "Siegelring", "Manschettenknöpfe alt", "Medaillon alt",
+  "Charivari", "Uhrenkette", "Krawattennadel", "Anstecknadel alt", "Gliederarmband alt", "Collier alt",
+  "Trachtenschmuck", "Granatschmuck", "Granat Brosche", "Korallenkette alt", "Bernsteinkette alt",
+  "Perlenkette alt", "Kamee Brosche", "Gemme Anhänger", "Armreif alt", "Schmuck Konvolut", "Schmuckset alt",
+]
+fr = ["broche ancienne", "clips d'oreilles vintage", "chevalière", "boutons de manchette anciens", "médaillon ancien", "camée"]
+it = ["spilla antica", "orecchini clip vintage", "anello chevalier", "gemelli antichi", "cammeo"]
+nl = ["oude broche", "oorclips vintage", "zegelring", "manchetknopen oud", "medaillon oud", "camee"]
+en = ["antique brooch", "vintage clip earrings", "signet ring", "vintage cufflinks", "antique locket", "cameo brooch"]
+
+[richtung.D]
+name = "Design / Epoche"
+beschreibung = "Echte Vertreter bedeutender Designperioden (nur mit konkreten Stilhinweisen)"
+de = [
+  "Art Deco Brosche", "Art Deco Ring", "Art Deco Anhänger", "Jugendstil Brosche", "Jugendstil Anhänger",
+  "Jugendstil Ring", "Belle Epoque Schmuck", "Biedermeier Schmuck", "Historismus Schmuck",
+  "Mid Century Schmuck", "Brutalist Ring", "Brutalismus Schmuck", "Space Age Schmuck", "Modernist Schmuck",
+  "60er Jahre Schmuck", "70er Jahre Ring", "Emaille Brosche alt", "Filigran Brosche", "Markasit Brosche",
+  "Mikromosaik", "Trauerschmuck", "Berliner Eisen", "Galalith", "Bakelit Schmuck", "Skandinavisch Silber Schmuck",
+]
+fr = ["broche art déco", "bijou art nouveau", "bijou brutaliste", "bijou moderniste", "bijou années 60", "bijou space age"]
+it = ["spilla art déco", "gioiello liberty", "gioiello brutalista", "gioiello anni 60"]
+nl = ["art deco broche", "jugendstil sieraad", "brutalist sieraad", "modernistisch sieraad"]
+en = ["art deco brooch", "art nouveau pendant", "brutalist ring", "modernist jewelry", "space age jewelry", "mid century jewelry"]
+
+[richtung.F]
+name = "Fehler"
+beschreibung = "Tippfehler, fehlende Markennamen, unleserliche Stempel, falsche Kategorie"
+de = [
+  "Brosche signiert", "Schmuck signiert", "Stempel unleserlich", "Punze unbekannt", "unbekannte Punze",
+  "Marke unbekannt Brosche", "Ring gestempelt unbekannt", "Ohrclips signiert", "Kette gestempelt",
+  "schwerer Ring keine Ahnung", "Ring Gold?", "Kette Gold?", "Brosche Gold?",
+]
+fr = ["broche signée", "poinçon inconnu", "bijou signé inconnu"]
+it = ["spilla firmata", "punzone sconosciuto", "gioiello firmato"]
+nl = ["broche gesigneerd", "onbekende stempel", "sieraad gesigneerd"]
+en = ["signed brooch", "unknown hallmark", "unknown maker mark", "hallmarked unknown"]
+
+[richtung.G]
+name = "Visuell"
+beschreibung = "Breite, generische Suche ohne Wertwörter – hier entscheidet später die Bildanalyse"
+de = ["Ring", "Brosche", "Ohrclips", "Armband", "Kette", "Anhänger", "Manschettenknöpfe", "Armreif"]
+fr = ["bague", "broche", "clips", "bracelet", "collier", "pendentif"]
+it = ["anello", "spilla", "orecchini", "bracciale", "collana", "ciondolo"]
+nl = ["ring", "broche", "oorclips", "armband", "ketting", "hanger"]
+en = ["ring", "brooch", "clip earrings", "bracelet", "necklace", "pendant"]
+
+# ---------------------------------------------------------------------------
+# Design-DNA: Motive/Konstruktionen, die an eine Marke/Linie erinnern, auch wenn
+# der Verkäufer keinen Namen nennt. Treffer bedeuten nur "Formensprache erinnert an …".
+# alle = alle Begriffe müssen vorkommen; eines = mindestens einer davon.
+# ---------------------------------------------------------------------------
+[[dna]]
+eines = ["rollring", "dreierring", "trinity", "3 ringe ineinander", "drei ringe ineinander", "tricolor ring", "dreifarbiger ring"]
+erinnert_an = "Cartier Trinity bzw. klassischer Tricolor-Rollring (typisch Gold 585/750)"
+gold = true
+gewicht = 10
+
+[[dna]]
+eines = ["panther", "panthere", "leopardenkopf"]
+erinnert_an = "Cartier Panthère (sehr hohes Fälschungsrisiko)"
+gewicht = 4
+
+[[dna]]
+eines = ["kleeblatt", "vierblatt", "alhambra", "clover"]
+erinnert_an = "Van Cleef & Arpels Alhambra (extrem hohes Fälschungsrisiko)"
+gewicht = 2
+
+[[dna]]
+eines = ["serpenti", "tubogas", "tubo gas"]
+erinnert_an = "Bulgari Serpenti/Tubogas bzw. italienische Tubogas-Goldschmiedekunst"
+gold = true
+gewicht = 6
+
+[[dna]]
+alle = ["nagel", "armband"]
+erinnert_an = "Cartier Juste un Clou (Fälschungsrisiko hoch)"
+gewicht = 2
+
+[[dna]]
+eines = ["gansebluemchen emaille", "margeriten brosche", "daisy brosche", "emaille margerite"]
+erinnert_an = "Georg Jensen Daisy (vergoldetes Silber + Emaille)"
+gewicht = 6
+
+[[dna]]
+eines = ["trauben brosche", "moonlight grapes", "weintrauben brosche silber"]
+erinnert_an = "Georg Jensen Moonlight Grapes"
+gewicht = 6
+
+[[dna]]
+eines = ["klimt", "hundertwasser", "agyptisch emaille", "feueremaille", "feuer-emaille"]
+erinnert_an = "Frey Wille / Michaela Frey (Feuer-Emaille)"
+gewicht = 8
+
+[[dna]]
+eines = ["galalith", "chrom kette art deco", "maschinenzeitalter", "bauhaus kette"]
+erinnert_an = "Jakob Bengel (Art Déco, Chrom + Galalith, meist unsigniert)"
+gewicht = 10
+
+[[dna]]
+alle = ["markasit", "chrysopras"]
+erinnert_an = "Theodor Fahrner (Silber, Markasit, Chrysopras)"
+gewicht = 10
+
+[[dna]]
+alle = ["markasit", "art deco"]
+erinnert_an = "Art-Déco-Silberschmuck (u. a. Theodor Fahrner) – Stempel TF prüfen"
+gewicht = 6
+
+[[dna]]
+alle = ["bronze", "anhanger"]
+eines_zusatz = ["brutalist", "brutalismus", "finnland", "finland", "70er", "skulptural"]
+erinnert_an = "Finnischer Bronze-Brutalismus (Pentti Sarpaneva, Kupittaan Kulta, Hannu Ikonen)"
+gewicht = 10
+
+[[dna]]
+eines = ["skulpturaler ring silber", "organischer ring silber", "lapponia stil", "nordischer ring"]
+erinnert_an = "Lapponia / Björn Weckström (Space Age, Finnland)"
+gewicht = 6
+
+[[dna]]
+eines = ["gripoix", "glaspaste", "pate de verre"]
+erinnert_an = "Maison Gripoix (Glaspaste für Chanel, Dior, Poiret)"
+gewicht = 8
+
+[[dna]]
+eines = ["kamee", "gemme", "cameo", "camee"]
+erinnert_an = "Historische Kamee/Gemme – Fassungen häufig aus 333/585 Gold oder Silber"
+gold = true
+gewicht = 4
+
+[[dna]]
+eines = ["mikromosaik", "micromosaik", "micro mosaik", "micromosaic"]
+erinnert_an = "Grand-Tour-Mikromosaik (19. Jh., Italien)"
+gewicht = 10
+
+[[dna]]
+eines = ["pietra dura", "florentiner mosaik"]
+erinnert_an = "Florentiner Pietra dura (19./frühes 20. Jh.)"
+gewicht = 8
+
+[[dna]]
+eines = ["haarschmuck", "trauerschmuck", "memento mori", "gagat", "jet schmuck", "whitby jet"]
+erinnert_an = "Viktorianischer Trauerschmuck (Gagat, Haararbeiten, oft Goldfassung)"
+gewicht = 8
+
+[[dna]]
+eines = ["berliner eisen", "eisenkunstguss", "fer de berlin"]
+erinnert_an = "Berliner Eisen (frühes 19. Jh., sehr gesucht)"
+gewicht = 12
+
+[[dna]]
+alle = ["granat"]
+eines_zusatz = ["bohmisch", "bohemian", "prager", "alt", "antik", "biedermeier"]
+erinnert_an = "Böhmischer Granatschmuck – Fassung kann 333 Gold, vergoldetes Silber oder Tombak sein"
+gold = true
+gewicht = 5
+
+[[dna]]
+alle = ["koralle"]
+eines_zusatz = ["alt", "antik", "nachlass", "oma", "biedermeier"]
+erinnert_an = "Alte Edelkoralle (Achtung: Artenschutz/Nachweis bei Weiterverkauf beachten)"
+gewicht = 4
+
+[[dna]]
+eines = ["omega kette", "omegakette", "omega collier"]
+erinnert_an = "Omega-Reif/Omegakette – klassische Goldkonstruktion (auch vergoldet üblich)"
+gold = true
+gewicht = 4
+
+[[dna]]
+eines = ["fischgratkette", "fischgrat kette", "venezianerkette", "konigskette", "byzantinerkette"]
+erinnert_an = "Klassische Goldketten-Konstruktion – Verschluss/Endstück auf Punze prüfen"
+gold = true
+gewicht = 4
