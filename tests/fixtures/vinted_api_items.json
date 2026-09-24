@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "id": 1000001,
+      "title": "Alter Ring goldfarben mit rotem Stein",
+      "price": {"amount": "12.0", "currency_code": "EUR"},
+      "total_item_price": {"amount": "13.30", "currency_code": "EUR"},
+      "brand_title": "",
+      "url": "https://www.vinted.de/items/1000001-alter-ring",
+      "description": "Aus Omas Schmuckschatulle, keine Ahnung was das ist. Ring ist recht schwer, Krappenfassung mit rotem Stein. Innen evtl. ein Stempel, kann ihn nicht lesen.",
+      "photos": [{"url": "https://images1.vinted.net/t/ring-1.jpeg", "full_size_url": "https://images1.vinted.net/f/ring-1.jpeg"}],
+      "catalog": {"id": 999, "title": "Schmuck"},
+      "user": {"login": "oma_erbe"}
+    },
+    {
+      "id": 1000002,
+      "title": "Goldring 585 Gelbgold",
+      "price": {"amount": "45.0", "currency_code": "EUR"},
+      "brand_title": "",
+      "description": "Ring aus 585er Gold, wiegt 3,2 g. Aus einem Nachlass.",
+      "photos": [{"url": "https://images1.vinted.net/t/g1.jpeg"}, {"url": "https://images1.vinted.net/t/g2.jpeg"}, {"url": "https://images1.vinted.net/t/g3.jpeg"}],
+      "user": {"login": "nachlass_verkauf"}
+    },
+    {
+      "id": 1000003,
+      "title": "Brosche Markasit Silber Art Deco",
+      "price": "18.00",
+      "brand_title": "",
+      "description": "Alte Brosche mit Markasit und grünem Chrysopras, Rückseite gestempelt Farner? Dachbodenfund.",
+      "photo": {"url": "https://images1.vinted.net/t/brosche.jpeg"},
+      "user": {"login": "dachboden"}
+    },
+    {
+      "id": 1000004,
+      "title": "Pandora Armband mit 5 Charms",
+      "price": {"amount": "35.0", "currency_code": "EUR"},
+      "brand_title": "Pandora",
+      "description": "Original Pandora, Silber 925",
+      "photos": [{"url": "https://images1.vinted.net/t/p.jpeg"}]
+    },
+    {
+      "id": 1000005,
+      "title": "Edelstahl Kette 18k gold plated",
+      "price": {"amount": "6.0", "currency_code": "EUR"},
+      "brand_title": "",
+      "description": "Neu, nie getragen, 18K vergoldet",
+      "photos": [{"url": "https://images1.vinted.net/t/e.jpeg"}]
+    },
+    {
+      "id": 1000006,
+      "title": "Cartier Love Armband",
+      "price": {"amount": "25.0", "currency_code": "EUR"},
+      "brand_title": "Cartier",
+      "description": "Schönes Armband",
+      "photos": [{"url": "https://images1.vinted.net/t/c.jpeg"}]
+    },
+    {
+      "id": 1000007,
+      "title": "Ohrclips vintage goldfarben",
+      "price": {"amount": "9.0", "currency_code": "EUR"},
+      "brand_title": "",
+      "description": "Schwere Ohrclips mit Omega-Clip, weiß nicht welches Material.",
+      "photos": [{"url": "https://images1.vinted.net/t/o1.jpeg"}]
+    },
+    {
+      "id": 1000008,
+      "title": "Sterling Silber Ring schlicht",
+      "price": {"amount": "10.0", "currency_code": "EUR"},
+      "brand_title": "",
+      "description": "925 Silber Ring Gr. 56, kaum getragen",
+      "photos": [{"url": "https://images1.vinted.net/t/s.jpeg"}]
+    },
+    {
+      "id": 1000009,
+      "title": "Schmuck Konvolut 25 Teile Nachlass",
+      "price": {"amount": "20.0", "currency_code": "EUR"},
+      "brand_title": "",
+      "description": "Alter Modeschmuck vom Dachboden, Broschen, Ketten, Ringe. Evtl. ist auch Gold dabei, ungeprüft.",
+      "photos": [{"url": "https://images1.vinted.net/t/k1.jpeg"}, {"url": "https://images1.vinted.net/t/k2.jpeg"}]
+    },
+    {
+      "id": 1000010,
+      "title": "Winterjacke Größe 38",
+      "price": {"amount": "15.0", "currency_code": "EUR"},
+      "brand_title": "Esprit",
+      "description": "geringe Gebrauchsspuren",
+      "photos": [{"url": "https://images1.vinted.net/t/j.jpeg"}]
+    }
+  ]
+}

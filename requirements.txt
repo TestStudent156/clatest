@@ -1,0 +1,6 @@
+requests>=2.31
+anthropic>=1.8
+# empfohlen: imitiert einen echten Browser und wird seltener von Vinted blockiert
+curl_cffi>=0.7
+# nur für Tests
+pytest>=8
